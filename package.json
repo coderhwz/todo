@@ -1,0 +1,14 @@
+{
+    "name": "Todo",
+    "version": "0.0.1",
+    "dependencies": {
+        "express":"~4.14.1",
+        "bcrypt":"~1.0.2",
+        "sequelize":"~3.30.2"
+    },
+    "devDependencies": { },
+    "engines": {
+        "node": ">=0.8.0"
+    }
+
+}
