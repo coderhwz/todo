@@ -9,7 +9,7 @@
 {
     "status":0,
     "message":"用户名已存在",
-    data:""
+    "data":""
 }
 ```
 
@@ -18,7 +18,7 @@
 {
     "status":1,
     "message":"用户名已存在",
-    data:""
+    "data":""
 }
 
 
