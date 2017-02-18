@@ -6,7 +6,7 @@
 header.sgin_header {
 	background: #00b38a;
 	width: 100%;
-	height:300;
+	height:300px;
 	text-align: center;
 	padding-top: 30px;
 	color: #fff;
@@ -53,6 +53,10 @@ footer.sign_footer {
 	padding: 50px
 }
 /*register*/
+.content_box .register_nav {
+	border-bottom: 1px solid #ebebeb;
+    width: 280px;
+}
 .content_box .register_nav a {
 	position: relative;
 	width:135px;
@@ -68,7 +72,7 @@ footer.sign_footer {
 .content_box .register_nav a .icon_phone,
 .content_box .register_nav a .icon_mail{
 	position: absolute;
-    background-image: url(images/icon_phone.png);
+    background-image: url(images/icon-phone.png);
     background-size: 14px 16px;
     display: inline-block;
     width: 14px;
@@ -77,7 +81,7 @@ footer.sign_footer {
     top: 0px;
 }
 .content_box .register_nav a .icon_mail {
-	background-image: url(images/icon_mail.png);
+	background-image: url(images/icon-mail.png);
     background-size: 18px 12px;
     height: 12px;
     left: 15px;
@@ -88,10 +92,40 @@ footer.sign_footer {
 	color: #00b38a;
 }
 .content_box .register_nav a.active .icon_phone {
-	background-image: url(images/icon_phone-active.png);
+	background-image: url(images/icon-phone-active.png);
 }
 .content_box .register_nav a.active .icon_mail {
-	background-image: url(images/icon_mail-active.png);
+	background-image: url(images/icon-mail-active.png);
+}
+.content_box .register_nav .tab_active {
+	height: 1px;
+    width: 140px;
+    background-color: #00b38a;
+    display: block;
+    position: relative;
+}
+.content_box .register_nav .tab_active:before,
+.content_box .register_nav .tab_active:after {
+	position: absolute;
+	z-index: 2;
+	left: 50%;
+	margin-left: -3px;
+	content: '';
+	width: 0;
+	height: 0;
+	line-height: 0;
+	border:6px solid transparent;
+	border-bottom-color: #00b38a;
+    top: -11px;
+
+}
+.content_box .register_nav .tab_active:after {
+	z-index: 3;
+	top: -10px;
+	width: 0;
+	height: 0;
+	border:6px solid transparent;
+	border-bottom-color: #fff;
 }
 .content_box .phone_box .passwod_lit {
 	width: 130px;
@@ -125,3 +159,4 @@ footer.sign_footer {
 .content_box .user_treaty {
 	display: inline;
 }
+
