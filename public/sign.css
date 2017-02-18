@@ -2,7 +2,7 @@
 .mar_bottom_20 {
 	margin-bottom:20px;
 }
-/*body*/
+/*sign in*/
 header.sgin_header {
 	background: #00b38a;
 	width: 100%;
@@ -23,10 +23,13 @@ header.sgin_header {
 	padding-left: 30px;
 	font-size: 14px;
 }
+.content_box form {
+	margin-left: 20px;
+}
 .content_box input {
 	width: 270px;
 	height: 44px;
-	margin: 20px;
+	margin: 20px 20px 20px 0;
 	padding-left: 10px;
 	background-color: #f8f8f8;
 }
@@ -36,6 +39,7 @@ header.sgin_header {
 	color: #fff;
 	border-radius: 2px;
 	text-align: center;
+	font-size: 14px;
 }
 .content_box  a {
 	display: inline-block;
@@ -48,4 +52,76 @@ footer.sign_footer {
 	text-align: center;
 	padding: 50px
 }
-
+/*register*/
+.content_box .register_nav a {
+	position: relative;
+	width:135px;
+	height: 30px;
+	text-align: center;
+	font-size: 16px;
+	color: #000;
+	cursor: pointer;
+}
+.content_box .register_nav {
+	margin: 30px  20px 0 0;
+}
+.content_box .register_nav a .icon_phone,
+.content_box .register_nav a .icon_mail{
+	position: absolute;
+    background-image: url(images/icon_phone.png);
+    background-size: 14px 16px;
+    display: inline-block;
+    width: 14px;
+    height: 16px;
+    left: 2px;
+    top: 0px;
+}
+.content_box .register_nav a .icon_mail {
+	background-image: url(images/icon_mail.png);
+    background-size: 18px 12px;
+    height: 12px;
+    left: 15px;
+    width: 18px;
+    top: 2px;
+}
+.content_box .register_nav a.active {
+	color: #00b38a;
+}
+.content_box .register_nav a.active .icon_phone {
+	background-image: url(images/icon_phone-active.png);
+}
+.content_box .register_nav a.active .icon_mail {
+	background-image: url(images/icon_mail-active.png);
+}
+.content_box .phone_box .passwod_lit {
+	width: 130px;
+}
+.content_box .phone_box .auth_code {
+	position: relative;
+}
+.content_box .phone_box .auth_code a {
+	background-image: url(images/icon-reflash.jpg);
+    background-size: 19px 21px;
+    height: 21px;
+    width: 19px;
+    position: absolute;
+    left: 240px;
+    top: 30px;
+}
+.content_box .phone_box .auth_code img {
+	position: absolute;
+    left: 120px;
+    top: 20px;
+    height: 44px;
+}
+.content_box .checkbox {
+	zoom: 1;
+    width: 13px;
+    height: 13px;
+    outline: 0;
+    margin-left: 19px;
+    margin-right: 5px;
+}
+.content_box .user_treaty {
+	display: inline;
+}
