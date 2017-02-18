@@ -3,6 +3,7 @@ $(function(){
     $(".register_nav a").click(function(){
     	var detaActive = $(this).attr('date-active')
         $(this).addClass("active").siblings().removeClass('active');
-        $('.tab_active').animate({left:detaActive*140})
+        $('.tab_active').animate({left:detaActive*140});
+        $('div[date-box="datebox"]').eq(detaActive).show().siblings().hide();
     })
 });
