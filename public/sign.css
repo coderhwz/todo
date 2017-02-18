@@ -27,6 +27,7 @@ header.sgin_header {
 	width: 270px;
 	height: 44px;
 	margin: 20px;
+	padding-left: 10px;
 	background-color: #f8f8f8;
 }
 .content_box input.sign_submite {
