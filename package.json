@@ -2,11 +2,12 @@
     "name": "Todo",
     "version": "0.0.1",
     "dependencies": {
-        "express":"~4.14.1",
+        "express":"~4.14.1", 
         "sqlite3":"~3.1.8",
         "bcrypt":"~1.0.2",
         "sequelize":"~3.30.2",
-        "sequelize-cli":"~2.5.1"
+        "sequelize-cli":"~2.5.1",
+        "morgan":"~1.8.1"
     },
     "devDependencies": { },
     "engines": {
