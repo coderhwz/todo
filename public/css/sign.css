@@ -32,6 +32,7 @@ header.sgin_header {
 	margin: 20px 20px 20px 0;
 	padding-left: 10px;
 	background-color: #f8f8f8;
+	border: 1px solid #f8f8f8;
 }
 .content_box input.sign_submite {
 	background-color: #00b38a;
@@ -127,9 +128,6 @@ footer.sign_footer {
 	border:6px solid transparent;
 	border-bottom-color: #fff;
 }
-.content_box .phone_box .passwod_lit {
-	width: 130px;
-}
 .content_box .phone_box .auth_code {
 	position: relative;
 }
@@ -141,12 +139,6 @@ footer.sign_footer {
     position: absolute;
     left: 240px;
     top: 30px;
-}
-.content_box .phone_box .auth_code img {
-	position: absolute;
-    left: 120px;
-    top: 20px;
-    height: 44px;
 }
 .content_box .checkbox {
 	zoom: 1;
@@ -161,4 +153,10 @@ footer.sign_footer {
 }
 .content_box .point {
 	color: red;
+}
+.content_box input:focus {
+	border-color: #00b38a;
+}
+.content_box input.input_active {
+	border-color:red;
 }
