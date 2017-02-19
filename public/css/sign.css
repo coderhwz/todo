@@ -159,4 +159,6 @@ footer.sign_footer {
 .content_box .user_treaty {
 	display: inline;
 }
-
+.content_box .point {
+	color: red;
+}

@@ -23,7 +23,9 @@ $(function(){
             password:verificationCode,
             repassword:phonePssword
         },function(data,status){
-            console.log(data);
+        	var point =$('.point');
+        	point.text(data.message);
+            console.log(data.message);
             //alert("数据:"+data +"\状态:"+status);
         });
     });
