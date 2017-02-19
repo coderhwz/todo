@@ -13,7 +13,7 @@
 		用户注册
 	</header>
 	<section class="content_box">
-		<form>
+		<form action method="post">
 			<nav class="register_nav">
 				<a class="active" date-active="0"><span class="icon_phone"></span>手机号码注册</a>
 				<a date-active="1"><span class="icon_mail"></span>邮箱注册</a>
@@ -21,9 +21,9 @@
 			</nav>
 			<div>
 				<div class="phone_box" date-box="datebox">
-					<input type="text" placeholder="请输入常用手机号码">
+					<input type="text" placeholder="请输入常用手机号码" date-number="phone-number" class="phone_number">
 					<div class="auth_code">
-						<input type="password" placeholder="请证明你不是机器人" class="passwod_lit">
+						<input type="text" placeholder="请证明你不是机器人" class="passwod_lit" input[date-Verification="Verification-code">
 						<img src="images/create.jpeg" >
 						<a href=""></a>
 					</div>

@@ -5,8 +5,20 @@ $(function(){
 	    	_this = $(this);
 	    	tabActive = $('.tab_active'),
 	    	dateBox = $('div[date-box="datebox"]');
-        _this.addClass("active").siblings().removeClass('active');
+        _this.addClass('active').siblings().removeClass('active');
         tabActive.animate({left:detaActive*140});
         dateBox.eq(detaActive).show().siblings().hide();
     });
+   $(".phone_box input[type=submit]").click(function(){
+	    var phoneNumber = $('.phone_box  .phone_number').attr('placeholder');
+	    var verificationCode = $('.phone_box  .passwod_lit').attr('placeholder');
+	    var phonePssword = $('.phone_box  input[type=password]').attr('placeholder');
+	   	$.post("/users/create",{
+	   		loginName:phoneNumber,
+	   		password:verificationCode,
+	   		repassword:phonePssword
+   	},function(date,status){
+   		alert("数据:"+date +"\状态:"+status);
+   	});
+   });
 });

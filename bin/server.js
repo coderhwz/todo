@@ -5,7 +5,6 @@
     */
 
 var app = require('../app');
-var debug = require('debug')('express-sequelize');
 var http = require('http');
 var models = require('../models');
 
@@ -20,7 +19,6 @@ models.sequelize.sync().then(function() {
         * Listen on provided port, on all network interfaces.
         */
     server.listen(port, function() {
-        debug('Express server listening on port ' + server.address().port);
     });
     server.on('error', onError);
     server.on('listening', onListening);
@@ -83,5 +81,4 @@ function onListening() {
     var bind = typeof addr === 'string'
         ? 'pipe ' + addr
         : 'port ' + addr.port;
-    debug('Listening on ' + bind);
 }
