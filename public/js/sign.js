@@ -10,7 +10,11 @@ $(function(){
         dateBox.eq(detaActive).show().siblings().hide();
     });
     $(".phone_box input[type=submit]").click(function(event){
+        // type=submit 这个按钮是提交按钮，默认有个提交表单的事情的，所以在这里
+        // 如果不把它关闭掉，那么点击之后，在执行本函数之后，就会提交默认表单提
+        // 交，这里使用以下一行代码去把默认事件屏蔽
         event.preventDefault();
+
         var phoneNumber = $('.phone_box  .phone_number').attr('placeholder');
         var verificationCode = $('.phone_box  .passwod_lit').attr('placeholder');
         var phonePssword = $('.phone_box  input[type=password]').attr('placeholder');
