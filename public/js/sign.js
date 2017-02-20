@@ -1,5 +1,31 @@
 // jQuery准备好时，再执行基于jQuery的调用,以下的这个函数等同于 $.ready(function(){}); 调用
 $(function(){
+
+	var hasError = false;
+
+	$('#reg-form').submit(function(e){
+		// 检查一个表单是否能过了验证
+
+
+
+		e.preventDefault();
+
+		if(hasError){
+			console.log("has Error "); return ;
+		}
+		$.post($(this).attr("action"),$(this).serialize(),function(data){
+			console.log(data);
+		});
+	});
+
+
+
+
+
+
+
+
+
 	//手机号码和邮箱的切换效果
     $(".register_nav a").click(function(){
         var detaActive = $(this).attr('date-active'),
@@ -11,7 +37,7 @@ $(function(){
         dateBox.eq(detaActive).show().siblings().hide();
     });
     //提交手机注册
-    $(".phone_box input[type=submit]").click(function(event){
+    /*$(".phone_box input[type=submit]").click(function(event){
         // type=submit 这个按钮是提交按钮，默认有个提交表单的事情的，所以在这里
         // 如果不把它关闭掉，那么点击之后，在执行本函数之后，就会提交默认表单提
         // 交，这里使用以下一行代码去把默认事件屏蔽
@@ -28,7 +54,7 @@ $(function(){
         	var point =$('.point');
         	point.text(data.message);
         });
-    });
+    });*/
     //判断input的内容是否符合格式
     var phoneNumber = $('.phone_box  .phone_number');
     var phonePasswordTwo = $('.phone_box  .password_two');
@@ -41,8 +67,10 @@ $(function(){
 		    if (phoneNumberVal !== '') {
 	    		$(this).addClass('input_active');
 		    };
+		    hasError = true;
     	} else {
     		$(this).removeClass('input_active');
+    		hasError = false;
     	}
     });
     //input鼠标离开时移除红色提示样式
