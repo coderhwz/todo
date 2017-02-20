@@ -157,6 +157,6 @@ footer.sign_footer {
 .content_box input:focus {
 	border-color: #00b38a;
 }
-.content_box input.input_active {
-	border-color:red;
+.content_box input.input_active,.has-error {
+	border-color:red !important;
 }

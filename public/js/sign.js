@@ -1,18 +1,38 @@
 // jQuery准备好时，再执行基于jQuery的调用,以下的这个函数等同于 $.ready(function(){}); 调用
 $(function(){
 
-	var hasError = false;
+	var Validate = function(){
+
+		var errors = [];
+		$('input[data-type=phone]').on('input',function(){
+			var number = $(this).val();
+			if (!(/^1(3|4|5|7|8)\d{9}$/.test(number))) {
+	    		$(this).addClass('has-error');
+	    	} else {
+				$(this).removeClass('has-error');
+	    	}
+		});
+
+
+	};
+
+	Validate.prototype.hasError = function(){
+		return this.errors;
+	};
+
+
+	var v = new Validate();
+
 
 	$('#reg-form').submit(function(e){
 		// 检查一个表单是否能过了验证
 
-
-
 		e.preventDefault();
 
-		if(hasError){
+		if(v.hasError()){
 			console.log("has Error "); return ;
 		}
+
 		$.post($(this).attr("action"),$(this).serialize(),function(data){
 			console.log(data);
 		});
@@ -61,7 +81,7 @@ $(function(){
     var phonePssword = $('.phone_box  input[type=password]');
 
     //判断手机号码是否符合格式
-    phoneNumber.blur(function() {
+    /*phoneNumber.blur(function() {
 	    var phoneNumberVal = $('.phone_box  .phone_number').val();
     	if (!(/^1(3|4|5|7|8)\d{9}$/.test(phoneNumberVal))) {
 		    if (phoneNumberVal !== '') {
@@ -72,7 +92,7 @@ $(function(){
     		$(this).removeClass('input_active');
     		hasError = false;
     	}
-    });
+    });*/
     //input鼠标离开时移除红色提示样式
     $(".content_box input").focus(function(){
     	$(this).removeClass('input_active');
