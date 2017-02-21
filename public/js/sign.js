@@ -12,11 +12,34 @@ $(function(){
 				$(this).removeClass('has-error');
 	    	}
 		});
+		$('input[type=password').on('input',function(){
+			var phoneRePasswordVal = $(this).val();
+	    	if (!(/^[0-9a-zA-Z_]{6,15}$/.test(phoneRePasswordVal))) {
+	    		if (phoneRePasswordVal !== '') {
+		    		$(this).addClass('input_active');
+	    		};
+	    	} else {
+	    		$(this).removeClass('input_active');
+	    	}
 
+		})
+		$('input[data-type=repassword').on('input',function(){
+			var	phonePasswordLitVal = $('.phone_box  .password_lit').val()
+		    var phonePasswordTwoVal = $('.phone_box  .password_two').val();
+	    	if (phonePasswordLitVal !== phonePasswordTwoVal) {
+	    		$(this).addClass('input_active');
+	    	};
+		})
+
+	    $(".content_box input").focus(function(){
+	    	$(this).removeClass('input_active');
+	    });
 
 	};
 
 	Validate.prototype.hasError = function(){
+
+		if (!(/^1(3|4|5|7|8)\d{9}$/.test($('input[data-type=phone]').val())) || !(/^[0-9a-zA-Z_]{6,15}$/.test($('input[data-type=phone]').val())))
 		return this.errors;
 	};
 
@@ -30,6 +53,7 @@ $(function(){
 		e.preventDefault();
 
 		if(v.hasError()){
+
 			console.log("has Error "); return ;
 		}
 
@@ -76,9 +100,9 @@ $(function(){
         });
     });*/
     //判断input的内容是否符合格式
-    var phoneNumber = $('.phone_box  .phone_number');
-    var phonePasswordTwo = $('.phone_box  .password_two');
-    var phonePssword = $('.phone_box  input[type=password]');
+    // var phoneNumber = $('.phone_box  .phone_number');
+    // var phonePasswordTwo = $('.phone_box  .password_two');
+    // var phonePssword = $('.phone_box  input[type=password]');
 
     //判断手机号码是否符合格式
     /*phoneNumber.blur(function() {
@@ -94,28 +118,25 @@ $(function(){
     	}
     });*/
     //input鼠标离开时移除红色提示样式
-    $(".content_box input").focus(function(){
-    	$(this).removeClass('input_active');
-    });
     //判断密码是否符合格式
-    phonePssword.blur(function() {
-    var	phonePasswordLitVal = $('.phone_box  .password_lit').val()
-    var phonePasswordTwoVal = $('.phone_box  .password_two').val();
-    	if (!(/^[0-9a-zA-Z_]{6,15}$/.test(phonePasswordTwoVal))) {
-    		if (phonePasswordTwoVal !== '') {
-	    		$(this).addClass('input_active');
-    		};
-    	} else {
-    		$(this).removeClass('input_active');
-    	}
-    });
+    // phonePssword.blur(function() {
+    // var	phonePasswordLitVal = $('.phone_box  .password_lit').val()
+    // var phonePasswordTwoVal = $('.phone_box  .password_two').val();
+    // 	if (!(/^[0-9a-zA-Z_]{6,15}$/.test(phonePasswordTwoVal))) {
+    // 		if (phonePasswordTwoVal !== '') {
+	   //  		$(this).addClass('input_active');
+    // 		};
+    // 	} else {
+    // 		$(this).removeClass('input_active');
+    // 	}
+    // });
     //第二次密码和第一次密码不同时候第二个密码框显示为红色
-	phonePasswordTwo.blur(function(){
-		var	phonePasswordLitVal = $('.phone_box  .password_lit').val()
-	    var phonePasswordTwoVal = $('.phone_box  .password_two').val();
-    	if (phonePasswordLitVal !== phonePasswordTwoVal) {
-    		$(this).addClass('input_active');
-    	};
-	})
+	// phonePasswordTwo.blur(function(){
+	// 	var	phonePasswordLitVal = $('.phone_box  .password_lit').val()
+	//     var phonePasswordTwoVal = $('.phone_box  .password_two').val();
+ //    	if (phonePasswordLitVal !== phonePasswordTwoVal) {
+ //    		$(this).addClass('input_active');
+ //    	};
+	// })
     //input边框效果和判断
 });

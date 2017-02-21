@@ -160,3 +160,25 @@ footer.sign_footer {
 .content_box input.input_active,.has-error {
 	border-color:red !important;
 }
+/*翻转效果*/
+.content_box {
+	transition:0.6s;
+	transform-style:preserve-3d;
+}
+.content_box:hover {
+	transform:rotateY(180deg);
+}
+#tra_sign {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#reg-form,#tra_sign {
+	backface-visibility:hidden;
+}
+#tra_sign {
+	z-index: 2;
+}
+#reg-form {
+	transform:rotateY(180deg);
+}
