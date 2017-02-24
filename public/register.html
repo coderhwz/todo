@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF_8">
+	<title>用户注册</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/sign.css">
+	 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	 <script type="text/javascript" src="js/sign.js"></script>
+</head>
+<body>
+	<header class="sgin_header">
+		用户注册
+	</header>
+	<section class="content_box">
+		<form action method>
+			<nav class="register_nav">
+				<a class="active" date-active="0"><span class="icon_phone"></span>手机号码注册</a>
+				<a date-active="1"><span class="icon_mail"></span>邮箱注册</a>
+				<span class="tab_active"></span>
+			</nav>
+			<div>
+				<div class="phone_box" date-box="datebox">
+					<input type="text" placeholder="请输入常用手机号码" date-number="phone-number" class="phone_number">
+					<div class="auth_code">
+						<input type="password" placeholder="请输入密码" class="password_lit">
+					</div>
+					<input type="password" placeholder="请确认输入密码" class="password_two">
+					<input type="checkbox" class="checkbox">我已阅读并同意
+					<a href="" class="user_treaty">《用户协议》</a>
+					<input type="submit" class="sign_submite" value="注册">
+				</div>
+				<div class="email_box" date-box="datebox" style="display:none">
+					<input type="text" placeholder="请输入常用邮箱地址">
+					<div>
+						<input type="password" placeholder="请输入密码">
+						<img src="" >
+					</div>
+					<input type="checkbox" class="checkbox">我已阅读并同意
+					<a href="" class="user_treaty">《用户协议》</a>
+					<input type="submit" class="sign_submite" value="注册">
+				</div>
+				<p class="point"></p>
+			</div>
+		</form>
+	</section>
+	<footer class="sign_footer">
+		有趣的实验
+	</footer>
+</body>
+</html>
