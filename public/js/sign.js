@@ -68,6 +68,20 @@ $(function(){
     	if (phonePasswordLitVal !== phonePasswordTwoVal) {
     		$(this).addClass('input_active');
     	};
-	})
-    //input边框效果和判断
+	});
+    //添加删除
+    $('.slide_list input[name="input_lit"]').on('keypress',function(){
+        if (event.which == 13) {
+            event.preventDefault();
+            var valLi = $(this).val();
+            var listTiem ='<li><input type="checkbox">' + valLi +'</li>';
+            $('.slide_list ul').append(listTiem);
+            $(this).val('');
+        };
+    });
+    $('.slide_list input[type="checkbox"]').on('click',function(){
+        $(this).parent().fadeOut(function(){
+            $(this).remove();
+        });
+    });
 });

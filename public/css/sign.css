@@ -160,3 +160,55 @@ footer.sign_footer {
 .content_box input.input_active {
 	border-color:red;
 }
+/*清单列表*/
+.slide_list {
+	margin: 10px 20px;
+	box-shadow: 3px 3px 10px  #a7a8a7;
+	font-family: 'Roboto', sans-serif;
+}
+.slide_list .slide {
+	width: 80%;
+	background-color: #18b33d;
+	height: 50px;
+	width: 100%;
+	position: relative;
+}
+.slide_list .slide i {
+	color: #fff;
+	width: 60px;
+	display:inline-block;
+	cursor: pointer;
+	width:40px;
+	font-size: 43px;
+	position: absolute;
+	left: 10px;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased
+}
+.slide_list .slide input {
+	background-color: transparent;
+	height: 100%;
+	width: 100%;
+	color: #fff;
+	font-size: 18px;
+	padding-left: 50px;
+}
+.header_list {
+	text-align: center;
+	margin-top: 20px;
+}
+.slide_list ul {
+	background-color: #fff;
+}
+.slide_list li {
+	height: 40px;
+	line-height: 40px;
+	padding-left: 20px;
+}
+.slide_list li:nth-child(2n){
+	background-color: #f7f7f7;
+}
+.slide_list li input {
+	margin-bottom: 3px;
+    margin-right: 10px;
+ }
