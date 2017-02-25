@@ -84,5 +84,16 @@ $(function(){
             $(this).remove();
         });
     });
-
+    //登录
+    $('#sign_form .sign_submite').on('click',function() {
+    	var logText = $('#sign_form input[type="text"]').val(),
+	    	logPassword = $('#sign_form input[type="password"]').val();
+    	event.preventDefault();
+	    $.post('/session/create',{
+    		loginName:logText,
+    		password:logPassword
+    	},function(date){
+    		$('point').text(date.message);
+    	});
+    });
 });
