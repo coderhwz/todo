@@ -8,7 +8,7 @@ var session = require('express-session');
 
 var users  = require('./controllers/users');
 var sess  = require('./controllers/session');
-var sess  = require('./controllers/task');
+var task  = require('./controllers/task');
 var FileStore = require('session-file-store')(session);
 
 var app = express();
@@ -48,7 +48,7 @@ app.use(['/*'],session({
 // app.use('/', routes);
 app.use('/users', users);
 app.use('/session', sess);
-app.use('/task', sess);
+app.use('/task', task);
 
 // catch 404 and forward to error handler
 /* app.use(function(req, res, next) {
